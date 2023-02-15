@@ -1,0 +1,68 @@
+{
+  "version": 1,
+  "author": "Spencer Wondolowski",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": 12, "left": -180, "attrs": {} },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn1",
+      "top": 397.24,
+      "left": -81.71,
+      "attrs": { "color": "red", "key": "ArrowUp", "bounce": "0" }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn2",
+      "top": 464.75,
+      "left": -172.2,
+      "attrs": { "color": "blue", "key": "ArrowLeft", "bounce": "0" }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn3",
+      "top": 464.45,
+      "left": -79.75,
+      "attrs": { "color": "green", "key": "ArrowDown", "bounce": "0" }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn4",
+      "top": 464.88,
+      "left": 16.22,
+      "attrs": { "color": "black", "key": "ArrowRight", "bounce": "0" }
+    },
+    {
+      "type": "board-ssd1306",
+      "id": "oled1",
+      "top": 277.67,
+      "left": -100.73,
+      "attrs": { "i2c-address": "0x3D" }
+    }
+  ],
+  "connections": [
+    [ "oled1:GND", "uno:GND.3", "black", [ "v-33.99", "h60.92" ] ],
+    [ "oled1:VCC", "uno:5V", "red", [ "v-29.93", "h32.47" ] ],
+    [ "oled1:SCL", "uno:A5", "green", [ "v-24.99", "h118.52" ] ],
+    [ "oled1:SDA", "uno:A4", "green", [ "v-19.06", "h99.19" ] ],
+    [ "btn1:2.l", "uno:GND.2", "black", [ "h-111.14", "v-209.29", "h177.74" ] ],
+    [ "btn2:2.l", "uno:GND.2", "black", [ "h-26.37", "v-273.07", "h188.07" ] ],
+    [
+      "btn3:2.l",
+      "uno:GND.2",
+      "black",
+      [ "h-11.92", "v18.59", "h-113.48", "v-286.58", "h194.65" ]
+    ],
+    [
+      "btn4:2.l",
+      "uno:GND.2",
+      "black",
+      [ "h-17.41", "v26.71", "h-210.24", "v-290.64", "h197.75" ]
+    ],
+    [ "btn1:1.r", "uno:1", "red", [ "h3.78", "v-0.46", "h150.1", "v-422.26", "h-73.17" ] ],
+    [ "btn2:1.r", "uno:2", "red", [ "v-29.43", "h251.69", "v-466.54", "h-89.37" ] ],
+    [ "btn3:1.r", "uno:3", "red", [ "v-22.57", "h164.98", "v-479.66", "h-107.41" ] ],
+    [ "btn4:1.r", "uno:4", "red", [ "v-15.62", "h73.46", "v-492.78", "h-119.71" ] ]
+  ],
+  "dependencies": {}
+}
